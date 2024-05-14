@@ -2,7 +2,7 @@
 Topik : Panduan Workout
 <hr>
 
-# anggota kelompok:
+# Anggota kelompok:
 <hr>  
     <pre> 1. Ardiansyah           (Hustler)</pre>
     <pre> 2. Khairun Nisa         (Hispter)</pre>
