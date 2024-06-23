@@ -1,8 +1,14 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Anggota kelompok:
+<hr>  
+    <pre> 1. Ardiansyah           (Hustler)</pre>
+    <pre> 2. Khairun Nisa         (Hispter)</pre>
+    <pre> 3. Ayu Anisa            (Hipster)</pre>
+    <pre> 4. Ihza Fatmawati       (Hacker)</pre>
+    <pre> 5. Rangga Ardhi Perkasa (Hacker)</pre>
+    <pre> 6. M. Jaisy Adl         (Hacker)</pre>
+    <pre> 7. Laila Jasmien        (Hacker) </pre>
+    <pre> 8. Ayu Sihombing        (Hacker) </pre>
+    <pre> 9. Putri Dewi Pradasari (Hacker)</pre>
+    <pre> 10. Fajar Budiman       (Hacker)</pre>
