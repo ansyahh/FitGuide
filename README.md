@@ -4,7 +4,7 @@ Topik : Panduan Workout
 
 # Anggota kelompok:
 <hr>  
-    <pre> 1. Ardiansyah           (Hustler)</pre>
+    <pre> 1. Ardiansyah           (Hustler 1)</pre>
     <pre> 2. Khairun Nisa         (Hispter)</pre>
     <pre> 3. Ayu Anisa            (Hipster)</pre>
     <pre> 4. Ihza Fatmawati       (Hacker)</pre>
