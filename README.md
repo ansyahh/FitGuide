@@ -1,6 +1,4 @@
-# FitGuide
-Topik : Panduan Workout
-<hr>
+# React + Vite
 
 # Anggota kelompok:
 <hr>  
