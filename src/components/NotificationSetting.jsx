@@ -1,12 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaChevronLeft, FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
 
 const NotificationSetting = () => {
   return (
     <div className="SettingsNotifikasi w-96 h-96 relative bg-white border border-white">
-      <div className="NotificationSetting left-[79px] top-[37px] absolute text-black text-2xl font-bold font-['Poppins'] capitalize">
-        Notification Setting
+      {/* Icon dan Lingkaran Profile di Kiri */}
+      <div className="Group73 w-16 h-16 left-[12px] top-[24px] absolute flex items-center justify-center">
+        <Link to="/my-profile" className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+          <div className="text-[#FF5050] text-2xl">
+            <FaChevronLeft />
+          </div>
+        </Link>
       </div>
+
+      {/* Password Setting */}
+      <div className="w-full flex justify-center">
+        <div className="MyProfile h-10 absolute left-[94px] top-[40px] text-black text-2xl font-medium font-['Inter']">
+          Notification Setting
+        </div>
+      </div>
+
       <div className="GeneralNotification w-80 h-7 left-[448px] top-[140px] absolute text-black text-lg font-normal font-['Poppins']">
         General Notification
       </div>
@@ -46,35 +60,55 @@ const NotificationSetting = () => {
         <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
       </div>
 
-      {/* Navigasi Menu */}
-      <div className="Group73 w-16 h-16 left-[7px] top-[24px] absolute">
-        <div className="Ellipse5 w-16 h-16 left-0 top-0 absolute bg-zinc-300/opacity-50 rounded-full" />
-        <div className="IcChevronLeft24px1 w-14 h-14 left-[4px] top-[5px] absolute" />
-      </div>
-      <div className="NotificationSetting w-48 h-4 left-[124px] top-[255px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/notification-setting" className="text-black">Notification Setting</Link>
-      </div>
-      <div className="PasswordSetting w-44 h-4 left-[124px] top-[350px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/password-setting" className="text-black">Password Setting</Link>
-      </div>
-      <div className="Profile w-20 h-4 left-[130px] top-[153px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/profile" className="text-black">Profile</Link>
-      </div>
-      <div className="Component41 w-14 h-12 left-[38px] top-[133px] absolute">
-        <div className="Ellipse1 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full" />
-      </div>
-      <div className="Component42 w-14 h-12 left-[37px] top-[329px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
-      </div>
-      <div className="Component43 w-14 h-12 left-[37px] top-[231px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
-        <div className="SilhouetteIcon w-7 h-8 left-[41.08px] top-[39.60px] absolute origin-top-left -rotate-180" />
-      </div>
-      <div className="Logout w-20 h-4 left-[123px] top-[443px] absolute text-black text-lg font-normal font-['Poppins']">
-        Logout
-      </div>
-      <div className="Component47 w-14 h-12 left-[37px] top-[427px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
+      
+      {/* Container untuk Pengaturan dan Lingkaran Icon */}
+      <div className="SettingsContainer absolute left-[41px] top-[141px] space-y-8">
+        {/* Pengaturan dan Lingkaran Icon */}
+        <div className="ProfileSection flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaUser className="text-white" /> {/* Icon user */}
+          </div>
+          <Link
+            to="/profile"
+            className="Profile text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Profile
+          </Link>
+        </div>
+
+        <div className="NotificationSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaBell className="text-white" /> {/* Icon bell */}
+          </div>
+          <Link
+            to="/notification-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Notification Setting
+          </Link>
+        </div>
+
+        <div className="PasswordSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaKey className="text-white" /> {/* Icon key */}
+          </div>
+          <Link
+            to="/password-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Password Setting
+          </Link>
+        </div>
+
+        {/* Logout */}
+        <div className="Logout flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaSignOutAlt className="text-white" /> {/* Icon logout */}
+          </div>
+          <div className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap">
+            Logout
+          </div>
+        </div>
       </div>
     </div>
   );

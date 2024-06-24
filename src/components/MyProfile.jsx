@@ -2,18 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
 import profileImage from '../assets/profile.jpeg';
+import { FaChevronLeft } from 'react-icons/fa';
 
 const MyProfile = () => {
   return (
     <div className="Profil w-96 h-auto relative bg-white p-4">
       {/* Icon dan Lingkaran Profile di Kiri */}
       <div className="Group73 w-16 h-16 left-[12px] top-[24px] absolute flex items-center justify-center">
-        <div className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+        <Link to="/" className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
           <div className="w-[40px] h-[40px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
-            <div className="text-[#FF5050] text-4xl">&#x276E;</div> {/* Icon left arrow */}
+            <div className="text-[#FF5050] text-2xl"><FaChevronLeft /></div> {/* Icon left arrow */}
           </div>
-        </div>
+        </Link>
       </div>
+
 
       {/* Tulisan My Profile */}
       <div className="MyProfile w-48 h-10 left-[94px] top-[40px] absolute text-black text-2xl font-medium font-['Inter']">
@@ -21,7 +23,7 @@ const MyProfile = () => {
       </div>
 
       {/* Bagian Avatar dan Teks */}
-      <div className="AvatarLabelGroup left-[279px] top-[132.38px] absolute flex items-center">
+      <div className="AvatarLabelGroup left-[279px] top-[95px] absolute flex items-center">
         <div className="w-32 h-32 rounded-full overflow-hidden">
           <img
             className="w-full h-full object-cover"
@@ -37,7 +39,7 @@ const MyProfile = () => {
       </div>
 
       {/* Container untuk Pengaturan dan Lingkaran Icon */}
-      <div className="SettingsContainer absolute left-[307px] top-[292px] space-y-8">
+      <div className="SettingsContainer absolute left-[307px] top-[265px] space-y-8">
         {/* Pengaturan dan Lingkaran Icon */}
         <div className="ProfileSection flex items-center">
           <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">

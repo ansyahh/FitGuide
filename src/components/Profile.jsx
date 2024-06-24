@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profileImage from '../assets/profile.jpeg';
+import { FaChevronLeft, FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
 
 const Profile = () => {
   return (
-    <div className="Profil w-96 h-auto relative bg-white p-4">
+    <div className="Profil w-96 h-840 relative bg-white p-4">
       {/* Icon dan Lingkaran Profile di Kiri */}
       <div className="Group73 w-16 h-16 left-[12px] top-[24px] absolute flex items-center justify-center">
-        <div className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-          <div className="w-[40px] h-[40px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
-            <div className="text-[#FF5050] text-4xl">&#x276E;</div> {/* Icon left arrow */}
+        <Link to="/my-profile" className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+          <div className="text-[#FF5050] text-2xl">
+            <FaChevronLeft />
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Judul My Profile */}
@@ -20,7 +21,7 @@ const Profile = () => {
       </div>
 
       {/* Bagian Avatar dan Teks */}
-      <div className="AvatarLabelGroup left-[279px] top-[132.38px] absolute flex items-center">
+      <div className="AvatarLabelGroup left-[371px] top-[62px] absolute flex items-center">
         <div className="w-32 h-32 rounded-full overflow-hidden">
           <img
             className="w-full h-full object-cover"
@@ -35,57 +36,101 @@ const Profile = () => {
         </div>
       </div>
 
+      {/* Form untuk Input Fields */}
+      <form className="ProfileForm" style={{ marginTop: '110px' }}>
+        <div className="FullName w-96 h-3.5 left-[499px] top-[182px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Full name</div>
+        <input
+          type="text"
+          className="Rectangle192 w-96 h-11 left-[499px] top-[205px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
+        <div className="Email w-96 h-3.5 left-[499px] top-[264px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Email</div>
+        <input
+          type="text"
+          className="Rectangle193 w-96 h-11 left-[499px] top-[287px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
+        <div className="MobileNumber w-96 h-3.5 left-[499px] top-[346px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Mobile Number</div>
+        <input
+          type="text"
+          className="Rectangle194 w-96 h-11 left-[499px] top-[369px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
+        <div className="DateOfBirth w-56 h-3.5 left-[499px] top-[429px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Date of birth</div>
+        <input
+          type="text"
+          className="Rectangle195 w-96 h-11 left-[499px] top-[452px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
+        <div className="Weight w-56 h-3.5 left-[499px] top-[512px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Weight</div>
+        <input
+          type="text"
+          className="Rectangle196 w-96 h-11 left-[499px] top-[535px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
+        <div className="Height w-56 h-3.5 left-[499px] top-[595px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Height</div>
+        <input
+          type="text"
+          className="Rectangle197 w-96 h-11 left-[499px] top-[618px] absolute bg-white rounded-2xl border border-zinc-500"
+          style={{ marginTop: '11px' }}
+        />
 
-      {/* Tombol Update Profile */}
-      <div className="MainButton w-60 px-3 py-2 left-[633px] top-[743px] absolute bg-red-500 rounded-full flex justify-center items-center gap-2.5">
-        <div className="MainButton text-center text-white text-base font-normal font-['Poppins'] leading-tight">
-          Update Profile
+        {/* Tombol Update Profile */}
+        <div className="MainButton w-60 px-3 py-2 left-[570px] top-[678px] absolute bg-red-500 rounded-full flex justify-center items-center gap-2.5" style={{ marginTop: '31px' }}>
+          <div className="MainButton text-center text-white text-base font-normal font-['Poppins'] leading-tight">
+            Update Profile
+          </div>
         </div>
-      </div>
+      </form>
 
-      {/* Input Fields */}
-      <div className="Rectangle189 w-96 h-11 left-[485px] top-[506px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="Rectangle190 w-96 h-11 left-[485px] top-[588px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="Rectangle191 w-96 h-11 left-[485px] top-[670px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="FullName w-96 h-3.5 left-[485px] top-[237px] absolute text-red-500 text-lg font-normal font-['Poppins']">Full name</div>
-      <div className="Rectangle192 w-96 h-11 left-[485px] top-[260px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="Email w-96 h-3.5 left-[485px] top-[319px] absolute text-red-500 text-lg font-normal font-['Poppins']">Email</div>
-      <div className="Rectangle193 w-96 h-11 left-[485px] top-[342px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="MobileNumber w-96 h-3.5 left-[485px] top-[402px] absolute text-red-500 text-lg font-normal font-['Poppins']">Mobile Number</div>
-      <div className="Rectangle194 w-96 h-11 left-[485px] top-[424px] absolute bg-white rounded-2xl border border-zinc-500" />
-      <div className="DateOfBirth w-56 h-3.5 left-[485px] top-[484px] absolute text-red-500 text-lg font-normal font-['Poppins']">Date of birth</div>
-      <div className="Weight w-56 h-3.5 left-[490px] top-[566px] absolute text-red-500 text-lg font-normal font-['Poppins']">Weight</div>
-      <div className="Height w-56 h-3.5 left-[495px] top-[648px] absolute text-red-500 text-lg font-normal font-['Poppins']">Height</div>
+      {/* Container untuk Pengaturan dan Lingkaran Icon */}
+      <div className="SettingsContainer absolute left-[41px] top-[141px] space-y-8">
+        {/* Pengaturan dan Lingkaran Icon */}
+        <div className="ProfileSection flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaUser className="text-white" /> {/* Icon user */}
+          </div>
+          <Link
+            to="/profile"
+            className="Profile text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Profile
+          </Link>
+        </div>
 
-      {/* Navigasi Menu */}
-      <div className="Group73 w-16 h-16 left-[12px] top-[24px] absolute">
-        <div className="Ellipse5 w-16 h-16 left-0 top-0 absolute bg-zinc-300/opacity-50 rounded-full" />
-        <div className="IcChevronLeft24px1 w-14 h-14 left-[4px] top-[5px] absolute" />
-      </div>
-      <div className="NotificationSetting w-48 h-4 left-[121px] top-[256px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/notification-setting" className="text-black">Notification Setting</Link>
-      </div>
-      <div className="PasswordSetting w-44 h-4 left-[121px] top-[351px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/password-setting" className="text-black">Password Setting</Link>
-      </div>
-      <div className="Profile w-20 h-4 left-[127px] top-[154px] absolute text-black text-lg font-normal font-['Poppins']">
-        <Link to="/profile" className="text-black">Profile</Link>
-      </div>
-      <div className="Component48 w-14 h-12 left-[35px] top-[134px] absolute">
-        <div className="Ellipse1 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full" />
-      </div>
-      <div className="Component49 w-14 h-12 left-[34px] top-[330px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
-      </div>
-      <div className="Component50 w-14 h-12 left-[34px] top-[232px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
-        <div className="SilhouetteIcon w-7 h-8 left-[41.08px] top-[39.60px] absolute origin-top-left -rotate-180" />
-      </div>
-      <div className="Logout w-20 h-4 left-[120px] top-[444px] absolute text-black text-lg font-normal font-['Poppins']">
-        Logout
-      </div>
-      <div className="Component51 w-14 h-12 left-[34px] top-[428px] absolute">
-        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
+        <div className="NotificationSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaBell className="text-white" /> {/* Icon bell */}
+          </div>
+          <Link
+            to="/notification-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Notification Setting
+          </Link>
+        </div>
+
+        <div className="PasswordSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaKey className="text-white" /> {/* Icon key */}
+          </div>
+          <Link
+            to="/password-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Password Setting
+          </Link>
+        </div>
+
+        {/* Logout */}
+        <div className="Logout flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
+            <FaSignOutAlt className="text-white" /> {/* Icon logout */}
+          </div>
+          <div className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap">
+            Logout
+          </div>
+        </div>
       </div>
     </div>
   );

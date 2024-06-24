@@ -14,6 +14,10 @@ import AboutUs from './components/aboutus/AboutUs';
 import ProgressTracking from './components/progress/ProgressTracking';
 import Login from './components/auth/Login';
 import SignUp from './components/auth/SignUp';
+import MyProfile from './components/MyProfile';
+import Profile from './components/Profile';
+import NotificationSetting from './components/NotificationSetting';
+import PasswordSetting from './components/PasswordSetting';
 
 function App() {
   return (
@@ -25,7 +29,13 @@ function App() {
 
 function MainLayout() {
   const location = useLocation();
-  const hideNavbarAndFooter = location.pathname === '/login' || location.pathname === '/signup';
+  const hideNavbarAndFooter =
+    location.pathname === '/login' ||
+    location.pathname === '/signup' ||
+    location.pathname === '/my-profile' ||
+    location.pathname === '/profile' ||
+    location.pathname === '/notification-setting' ||
+    location.pathname === '/password-setting';
 
   return (
     <>
@@ -42,6 +52,10 @@ function MainLayout() {
         <Route path="/bmiresult" element={<BMIResult />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/progress" element={<ProgressTracking />} />
+        <Route path="/my-profile" element={<MyProfile />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/notification-setting" element={<NotificationSetting />} />
+        <Route path="/password-setting" element={<PasswordSetting />} />
       </Routes>
       {!hideNavbarAndFooter && <Footer />}
     </>
@@ -58,31 +72,3 @@ function Home() {
 }
 
 export default App;
-
-
-
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import MyProfile from './components/MyProfile';
-// import Profile from './components/Profile';
-// import NotificationSetting from './components/NotificationSetting';
-// import PasswordSetting from './components/PasswordSetting';
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/my-profile" element={<MyProfile />} />
-//         <Route path="/profile" element={<Profile />} />
-//         <Route path="/notification-setting" element={<NotificationSetting />} />
-//         <Route path="/password-setting" element={<PasswordSetting />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
-
-

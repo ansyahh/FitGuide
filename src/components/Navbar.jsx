@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logonew.png';
+import profile from '../assets/profile.jpeg'; // Import the profile image
 
 const CustomNavbar = () => {
   const [active, setActive] = useState(false);
 
   const menuHandler = () => {
     setActive(!active);
-  };
-
-  const handleLogin = () => {
-    window.location.href = '/login';
   };
 
   return (
@@ -25,7 +22,9 @@ const CustomNavbar = () => {
           <Link to="/" className="hover:text-gray-400">Home</Link>
           <Link to="/about-us" className="hover:text-gray-400">About Us</Link>
           <Link to="/progress" className="hover:text-gray-400">Progress</Link>
-          <button onClick={handleLogin} className="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition">Login</button>
+          <Link to="/my-profile" className="flex items-center">
+            <img src={profile} alt="Profile" className="w-12 h-12 rounded-full object-cover" />
+          </Link>
         </nav>
         <div className="md:hidden flex items-center">
           <button onClick={menuHandler} className="focus:outline-none">
