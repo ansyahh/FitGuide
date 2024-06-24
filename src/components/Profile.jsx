@@ -84,6 +84,9 @@ const Profile = () => {
       <div className="Logout w-20 h-4 left-[120px] top-[444px] absolute text-black text-lg font-normal font-['Poppins']">
         Logout
       </div>
+      <div className="Component51 w-14 h-12 left-[34px] top-[428px] absolute">
+        <div className="Ellipse6 w-14 h-12 left-0 top-0 absolute bg-red-500 rounded-full border-2 border-red-500" />
+      </div>
     </div>
   );
 };
