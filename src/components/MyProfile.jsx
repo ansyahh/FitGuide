@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
-import profileImage from '../assets/profile.jpeg'; // Pastikan path ke gambar sesuai
+import profileImage from '../assets/profile.jpeg';
 
 const MyProfile = () => {
   return (
-    <div className="Profil w-96 h-96 relative bg-white">
+    <div className="Profil w-96 h-auto relative bg-white p-4">
       {/* Icon dan Lingkaran Profile di Kiri */}
       <div className="Group73 w-16 h-16 left-[12px] top-[24px] absolute flex items-center justify-center">
         <div className="w-16 h-16 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-[#FF5050]">&#x276E;</div> {/* Icon left arrow */}
+          <div className="w-[40px] h-[40px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+            <div className="text-[#FF5050] text-4xl">&#x276E;</div> {/* Icon left arrow */}
+          </div>
         </div>
       </div>
 
@@ -19,69 +21,67 @@ const MyProfile = () => {
       </div>
 
       {/* Bagian Avatar dan Teks */}
-      <div className="AvatarLabelGroup w-96 h-36 left-[94px] top-[116px] absolute flex gap-3 items-center">
-        <div className="MaskGroup w-[124px] h-[115.25px] relative rounded-full overflow-hidden">
+      <div className="AvatarLabelGroup left-[279px] top-[132.38px] absolute flex items-center">
+        <div className="w-32 h-32 rounded-full overflow-hidden">
           <img
-            className="w-[124px] h-[115.25px] rounded-full object-cover"
+            className="w-full h-full object-cover"
             src={profileImage}
             alt="Profile"
           />
         </div>
-        <div className="TextAndSupportingText flex-col justify-start items-start">
-          <div className="Text w-72 text-slate-700 text-4xl font-bold font-['Poppins']">
-            Ardiansyah
-          </div>
-          <div className="SupportingText w-60 text-gray-500 text-2xl font-normal font-['Poppins']">
-            ardi@gmail.com
-          </div>
-          <div className="Birthday text-neutral-800 text-xs font-bold font-['Poppins'] capitalize">
-            Birthday:
-          </div>
+        <div className="ml-4">
+          <div className="text-4xl font-bold text-slate-700">Ardiansyah</div>
+          <div className="text-2xl text-gray-500">ardi@gmail.com</div>
+          <div className="text-xs font-bold text-neutral-800 capitalize">Birthday:</div>
         </div>
       </div>
 
-      {/* Pengaturan dan Lingkaran Icon */}
-      <div className="ProfileSection">
-        <Link to="/profile" className="Profile w-20 h-4 left-[399px] top-[312px] absolute text-black text-lg font-normal font-['Poppins']">
-          Profile
-        </Link>
-        <div className="IconCircle w-[53px] h-[48px] left-[307px] top-[292px] absolute flex items-center justify-center">
-          <div className="w-[53px] h-[48px] bg-red-500 rounded-full flex items-center justify-center">
+      {/* Container untuk Pengaturan dan Lingkaran Icon */}
+      <div className="SettingsContainer absolute left-[307px] top-[292px] space-y-8">
+        {/* Pengaturan dan Lingkaran Icon */}
+        <div className="ProfileSection flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
             <FaUser className="text-white" /> {/* Icon user */}
           </div>
+          <Link
+            to="/profile"
+            className="Profile text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Profile
+          </Link>
         </div>
-      </div>
 
-      <div className="NotificationSetting">
-        <Link to="/notification-setting" className="w-48 h-4 left-[393px] top-[414px] absolute text-black text-lg font-normal font-['Poppins']">
-          Notification Setting
-        </Link>
-        <div className="IconCircle w-[53px] h-[48px] left-[307px] top-[390px] absolute flex items-center justify-center">
-          <div className="w-[53px] h-[48px] bg-red-500 rounded-full flex items-center justify-center">
+        <div className="NotificationSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
             <FaBell className="text-white" /> {/* Icon bell */}
           </div>
+          <Link
+            to="/notification-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Notification Setting
+          </Link>
         </div>
-      </div>
 
-      <div className="PasswordSetting">
-        <Link to="/password-setting" className="w-44 h-4 left-[393px] top-[509px] absolute text-black text-lg font-normal font-['Poppins']">
-          Password Setting
-        </Link>
-        <div className="IconCircle w-[53px] h-[48px] left-[307px] top-[488px] absolute flex items-center justify-center">
-          <div className="w-[53px] h-[48px] bg-red-500 rounded-full flex items-center justify-center">
+        <div className="PasswordSetting flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
             <FaKey className="text-white" /> {/* Icon key */}
           </div>
+          <Link
+            to="/password-setting"
+            className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap"
+          >
+            Password Setting
+          </Link>
         </div>
-      </div>
 
-      {/* Logout */}
-      <div className="Logout">
-        <div className="w-20 h-4 left-[392px] top-[602px] absolute text-black text-lg font-normal font-['Poppins']">
-          Logout
-        </div>
-        <div className="IconCircle w-[53px] h-[48px] left-[307px] top-[586px] absolute flex items-center justify-center">
-          <div className="w-[53px] h-[48px] bg-red-500 rounded-full flex items-center justify-center">
+        {/* Logout */}
+        <div className="Logout flex items-center">
+          <div className="IconCircle w-[53px] h-[53px] bg-red-500 rounded-full flex items-center justify-center mr-4">
             <FaSignOutAlt className="text-white" /> {/* Icon logout */}
+          </div>
+          <div className="text-black text-lg font-normal font-['Poppins'] whitespace-nowrap">
+            Logout
           </div>
         </div>
       </div>
