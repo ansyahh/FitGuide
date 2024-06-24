@@ -1,17 +1,14 @@
 {
-    "hosting": {
-      "public": "public",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "/gender?age=*",
-          "destination": "/index.html"
-        }
-      ]
-    }
+    "version": 2,
+    "routes": [
+      {
+        "src": "/gender",
+        "dest": "/gender"
+      },
+      {
+        "src": "/gender/(.*)",
+        "dest": "/gender"
+      }
+    ]
   }
   
