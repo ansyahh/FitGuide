@@ -1,9 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logonew.png';
+import { auth, db, logout } from "../firebase";
+import { query, collection, getDocs, where } from 'firebase/firestore';
 
 const CustomNavbar = () => {
   const [active, setActive] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
+  const fetchUserName = async () => {
+    try {
+      const q = query(collection(db, 'users'), where('uid', '==', user?.uid));
+      const doc = await getDocs(q);
+      const data = doc.docs[0].data();
+      setName(data.name);
+    } catch (err) {
+      console.error(err);
+      alert('An error occured while fetching user data');
+    }
+  };
+  useEffect(() => {
+    if (loading) return;
+    if (!user) return navigate('/');
+    fetchUserName();
+  }, [user, loading]);
 
   const menuHandler = () => {
     setActive(!active);
@@ -18,10 +41,23 @@ const CustomNavbar = () => {
           </div>
         </div>
         <nav className={`flex-1 ${active ? 'flex' : 'hidden'} md:flex items-center justify-end space-x-6`}>
-          <Link to="/" className="hover:text-gray-400">Home</Link>
-          <Link to="/about-us" className="hover:text-gray-400">About Us</Link>
-          <Link to="/progress" className="hover:text-gray-400">Progress</Link>
-          <button onClick={handleLogin} className="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition">Login</button>
+          <Link to="/" className="hover:text-gray-400">
+            Home
+          </Link>
+          <Link to="/about-us" className="hover:text-gray-400">
+            About Us
+          </Link>
+          <Link to="/progress" className="hover:text-gray-400">
+            Progress
+          </Link>
+          {/* nbutton login */}
+          {user ? (
+            <div>
+              <span>{user.displayName}</span>
+            </div>
+          ) : (
+            <button onClick={handleLogin}>Login</button>
+          )}
         </nav>
         <div className="md:hidden flex items-center">
           <button onClick={menuHandler} className="focus:outline-none">

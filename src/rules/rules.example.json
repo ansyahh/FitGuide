@@ -28,10 +28,10 @@
         {"umur": "36-70", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "lebih"},
         
         {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Fat Lose", "BMI": "kurang"},
-        {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "kurang"}
+        {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "kurang"},
         
         {"umur": "36-70", "jenis_kelamin": "Wanita", "program": "Fat Lose", "BMI": "kurang"},
-        {"umur": "36-70", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "kurang"},
+        {"umur": "36-70", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "kurang"}
     ],
     "semi-berat":[
         {"umur": "15-21", "jenis_kelamin": "Pria", "program": "Fat Lose", "BMI": "lebih"},
@@ -50,19 +50,19 @@
         {"umur": "22-35", "jenis_kelamin": "Pria", "program": "Muscle Gain", "BMI": "lebih"},
 
         {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Fat Lose", "BMI": "ideal"},
-        {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "ideal"},
+        {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "ideal"}
     ],
     "berat":[
         {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Fat Lose", "BMI": "lebih"},
         {"umur": "22-35", "jenis_kelamin": "Wanita", "program": "Muscle Gain", "BMI": "lebih"},
 
         {"umur": "36-70", "jenis_kelamin": "Pria", "program": "Fat Lose", "BMI": "kurang"},
-        {"umur": "36-70", "jenis_kelamin": "Pria", "program": "Muscle Gain", "BMI": "kurang"},
+        {"umur": "36-70", "jenis_kelamin": "Pria", "program": "Muscle Gain", "BMI": "kurang"}
     ],
     "extra-berat":[
 
         {"umur": "22-35", "jenis_kelamin": "Pria", "program": "Fat Lose", "BMI": "ideal"},
-        {"umur": "22-35", "jenis_kelamin": "Pria", "program": "Muscle Gain", "BMI": "ideal"},
+        {"umur": "22-35", "jenis_kelamin": "Pria", "program": "Muscle Gain", "BMI": "ideal"}
     ]
 }
     
