@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'; // Import ikon dari Font Awesome
-import logo from '../assets/logonew.png'; // Import gambar logo
+import logo from '../assets/logonew.png';
 
 const Footer = () => {
   return (

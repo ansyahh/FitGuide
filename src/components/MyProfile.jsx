@@ -32,8 +32,8 @@ const MyProfile = () => {
           />
         </div>
         <div className="ml-4">
-          <div className="text-4xl font-bold text-slate-700">Ardiansyah</div>
-          <div className="text-2xl text-gray-500">ardi@gmail.com</div>
+          <div className="text-4xl font-bold text-slate-700">Ahyar</div>
+          <div className="text-2xl text-gray-500">ahyar@gmail.com</div>
           <div className="text-xs font-bold text-neutral-800 capitalize">Birthday:</div>
         </div>
       </div>

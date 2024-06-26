@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logonew.png';
-import profile from '../assets/profile.jpeg'; // Import the profile image
+import profile from '../assets/profile.jpeg';
 
 const CustomNavbar = () => {
   const [active, setActive] = useState(false);

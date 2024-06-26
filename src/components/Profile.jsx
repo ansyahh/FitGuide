@@ -30,9 +30,9 @@ const Profile = () => {
           />
         </div>
         <div className="ml-4">
-          <div className="text-4xl font-bold text-slate-700">Ardiansyah</div>
-          <div className="text-2xl text-gray-500">ardi@gmail.com</div>
-          <div className="text-xs font-bold text-neutral-800 capitalize">Birthday:</div>
+          <div className="text-4xl font-bold text-slate-700">Ahyar</div>
+          <div className="text-2xl text-gray-500">ahyar@gmail.com</div>
+          <div className="text-xs font-bold text-neutral-800 capitalize">Birthday: 1990-01-01</div>
         </div>
       </div>
 
@@ -41,36 +41,42 @@ const Profile = () => {
         <div className="FullName w-96 h-3.5 left-[499px] top-[182px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Full name</div>
         <input
           type="text"
+          defaultValue="Ahyar"
           className="Rectangle192 w-96 h-11 left-[499px] top-[205px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />
         <div className="Email w-96 h-3.5 left-[499px] top-[264px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Email</div>
         <input
-          type="text"
+          type="email"
+          defaultValue="ahyar@gmail.com"
           className="Rectangle193 w-96 h-11 left-[499px] top-[287px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />
         <div className="MobileNumber w-96 h-3.5 left-[499px] top-[346px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Mobile Number</div>
         <input
           type="text"
+          defaultValue="08123456789"
           className="Rectangle194 w-96 h-11 left-[499px] top-[369px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />
         <div className="DateOfBirth w-56 h-3.5 left-[499px] top-[429px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Date of birth</div>
         <input
-          type="text"
+          type="date"
+          defaultValue="1990-01-01"
           className="Rectangle195 w-96 h-11 left-[499px] top-[452px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />
         <div className="Weight w-56 h-3.5 left-[499px] top-[512px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Weight</div>
         <input
           type="text"
+          defaultValue="70kg"
           className="Rectangle196 w-96 h-11 left-[499px] top-[535px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />
         <div className="Height w-56 h-3.5 left-[499px] top-[595px] absolute text-red-500 text-lg font-normal font-['Poppins']" style={{ marginTop: '11px' }}>Height</div>
         <input
           type="text"
+          defaultValue="170cm"
           className="Rectangle197 w-96 h-11 left-[499px] top-[618px] absolute bg-white rounded-2xl border border-zinc-500"
           style={{ marginTop: '11px' }}
         />

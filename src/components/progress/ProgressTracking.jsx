@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaCalendarAlt, FaFire, FaClock, FaBullseye } from 'react-icons/fa';
 
 const ProgressTracking = () => {
   // Data untuk simulasi riwayat progress
@@ -7,7 +8,6 @@ const ProgressTracking = () => {
     { month: 'Feb', steps: 3679, duration: '1hr40m' },
     { month: 'Mar', steps: 1859, duration: '1hr10m' },
     { month: 'Apr', steps: 2390, duration: '1hr15m' },
-    // Tambahkan data bulan lain jika diperlukan
   ];
 
   const weekDays = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
@@ -39,21 +39,18 @@ const ProgressTracking = () => {
           <div className="bg-white rounded-lg p-2 sm:p-4 shadow-lg mb-6 sm:mb-10" style={{ height: '120px' }}>
             <div className="flex items-center justify-around h-full">
               <div className="flex flex-col items-center text-black">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 0 1 .784.37l6 7a1 1 0 0 1 .104 1.053l-2 5a1 1 0 0 1-1.732.316L10 14.82l-2.156 4.92a1 1 0 0 1-1.732-.316l-2-5a1 1 0 0 1 .104-1.053l6-7A1 1 0 0 1 10 2zm0 4.34L7.13 9h5.74L10 6.34z" clipRule="evenodd" />
-                </svg>
+                <div className="relative h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2">
+                  <FaCalendarAlt className="absolute inset-0" />
+                  <FaBullseye className="absolute inset-0 m-auto" />
+                </div>
                 <div className="text-xs sm:text-base">Latihan</div>
               </div>
               <div className="flex flex-col items-center text-black">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm.5 2a1 1 0 0 0-1 1v2.8l-1.15-.69a1 1 0 0 0-1 1.73l2.5 1.5a1 1 0 0 0 1 0l2.5-1.5a1 1 0 1 0-1-1.73L10.5 7.1V4a1 1 0 0 0-1-1z" />
-                </svg>
+                <FaFire className="h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2" />
                 <div className="text-xs sm:text-base">Kalori</div>
               </div>
               <div className="flex flex-col items-center text-black">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 0 1 .784.37l6 7a1 1 0 0 1 .104 1.053l-2 5a1 1 0 0 1-1.732.316L10 14.82l-2.156 4.92a1 1 0 0 1-1.732-.316l-2-5a1 1 0 0 1 .104-1.053l6-7A1 1 0 0 1 10 2zm0 4.34L7.13 9h5.74L10 6.34z" clipRule="evenodd" />
-                </svg>
+                <FaClock className="h-6 sm:h-8 w-6 sm:w-8 mb-1 sm:mb-2" />
                 <div className="text-xs sm:text-base">Menit</div>
               </div>
             </div>

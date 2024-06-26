@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaChevronLeft, FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
-import profileImage from '../assets/profile.jpeg'; // Pastikan path ke gambar sesuai
-
+import profileImage from '../assets/profile.jpeg';
 const DetailProfile = () => {
   return (
     <div className="DetailProfile w-96 h-96 relative bg-white">

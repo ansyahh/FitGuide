@@ -22,9 +22,9 @@ const PasswordSetting = () => {
         </div>
       </div>
 
-      <div className="Rectangle192 w-96 h-16 left-[422px] top-[532px] absolute bg-white rounded-xl shadow" />
-      <div className="Rectangle191 w-96 h-16 left-[421px] top-[372px] absolute bg-white rounded-xl shadow" />
-      <div className="Rectangle39 w-96 h-16 left-[422px] top-[181px] absolute bg-white rounded-xl shadow" />
+      <div className="Rectangle192 w-[589px] h-[66px] left-[422px] top-[532px] absolute bg-white rounded-xl shadow-lg" />
+      <div className="Rectangle191 w-[589px] h-[66px] left-[421px] top-[372px] absolute bg-white rounded-xl shadow-lg" />
+      <div className="Rectangle39 w-[589px] h-[66px] left-[422px] top-[181px] absolute bg-white rounded-xl shadow-lg" />
       
       <div className="MainButton w-56 h-10 px-3 py-2 left-[601px] top-[659px] absolute bg-red-500 rounded-full flex justify-center items-center gap-2.5">
         <div className="MainButton text-center text-white text-lg font-normal font-['Poppins'] leading-tight">Change Password</div>
@@ -34,15 +34,15 @@ const PasswordSetting = () => {
         Forgot password?
       </div>
       
-      <div className="ConfirmNewPassword w-96 h-5 left-[422px] top-[498px] absolute text-red-500 text-lg font-normal font-['Poppins']">
+      <div className="ConfirmNewPassword w-[589px] h-5 left-[422px] top-[498px] absolute text-red-500 text-lg font-normal font-['Poppins']">
         Confirm New Password
       </div>
       
-      <div className="CurrentPassword w-96 h-5 left-[422px] top-[148px] absolute text-red-500 text-lg font-normal font-['Poppins']">
+      <div className="CurrentPassword w-[589px] h-5 left-[422px] top-[148px] absolute text-red-500 text-lg font-normal font-['Poppins']">
         Current Password
       </div>
       
-      <div className="NewPassword w-96 h-5 left-[421px] top-[338px] absolute text-red-500 text-lg font-normal font-['Poppins']">
+      <div className="NewPassword w-[589px] h-5 left-[421px] top-[338px] absolute text-red-500 text-lg font-normal font-['Poppins']">
         New Password
       </div>
       

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import googleIcon from '../../assets/google-20.svg'; // Pastikan path ke gambar sesuai
-import peopleImage from '../../assets/signup.jpg'; // Pastikan path ke gambar sesuai
-
+import googleIcon from '../../assets/google-20.svg';
+import peopleImage from '../../assets/signup.jpg';
 const SignUp = () => {
   return (
     <section className="min-h-screen flex justify-center items-center bg-gray-100 overflow-hidden">

@@ -1,7 +1,7 @@
 import React from 'react';
-import aboutImage from '../../assets/about.jpg'; // Import gambar hero
-import teamImage from '../../assets/team.jpg'; // Import gambar tim
-import goalsImage from '../../assets/goals.jpg'; // Import gambar tujuan
+import aboutImage from '../../assets/about.jpg';
+import teamImage from '../../assets/team.jpg';
+import goalsImage from '../../assets/goals.jpg'; 
 
 const AboutUs = () => {
   return (

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaUser, FaBell, FaKey, FaSignOutAlt } from 'react-icons/fa';
 
 const NotificationSetting = () => {
+  const [toggles, setToggles] = useState({
+    generalNotification: true,
+    sound: false,
+    dontDisturbMode: true,
+    vibrate: true,
+    lockScreen: false,
+    reminders: true,
+  });
+
+  const handleToggle = (toggle) => {
+    setToggles((prev) => ({ ...prev, [toggle]: !prev[toggle] }));
+  };
+
   return (
     <div className="SettingsNotifikasi w-96 h-96 relative bg-white border border-white">
       {/* Icon dan Lingkaran Profile di Kiri */}
@@ -41,26 +54,43 @@ const NotificationSetting = () => {
       </div>
 
       {/* Toggles */}
-      <div className="Component31 w-14 h-8 pl-0.5 pr-1 py-1 left-[922px] top-[133px] absolute bg-red-500 rounded-full flex items-center">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component31 w-14 h-8 pl-0.5 pr-1 py-1 left-[922px] top-[133px] absolute rounded-full flex items-center cursor-pointer ${toggles.generalNotification ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('generalNotification')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.generalNotification ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
-      <div className="Component32 w-14 h-8 pl-1 pr-0.5 py-1 left-[923px] top-[221px] absolute bg-black rounded-full flex items-center justify-end">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component32 w-14 h-8 pl-1 pr-0.5 py-1 left-[923px] top-[221px] absolute rounded-full flex items-center cursor-pointer ${toggles.sound ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('sound')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.sound ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
-      <div className="Component33 w-14 h-8 pl-0.5 pr-1 py-1 left-[923px] top-[310px] absolute bg-red-500 rounded-full flex items-center">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component33 w-14 h-8 pl-0.5 pr-1 py-1 left-[923px] top-[310px] absolute rounded-full flex items-center cursor-pointer ${toggles.dontDisturbMode ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('dontDisturbMode')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.dontDisturbMode ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
-      <div className="Component34 w-14 h-7 pl-0.5 pr-1 py-1 left-[923px] top-[398px] absolute bg-red-500 rounded-full flex items-center">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component34 w-14 h-7 pl-0.5 pr-1 py-1 left-[923px] top-[398px] absolute rounded-full flex items-center cursor-pointer ${toggles.vibrate ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('vibrate')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.vibrate ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
-      <div className="Component35 w-14 h-7 pl-1 pr-0.5 py-1 left-[923px] top-[484px] absolute bg-black rounded-full flex items-center justify-end">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component35 w-14 h-7 pl-1 pr-0.5 py-1 left-[923px] top-[484px] absolute rounded-full flex items-center cursor-pointer ${toggles.lockScreen ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('lockScreen')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.lockScreen ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
-      <div className="Component36 w-14 h-7 pl-0.5 pr-1 py-1 left-[923px] top-[584px] absolute bg-red-500 rounded-full flex items-center">
-        <div className="Ellipse33 w-3 h-3 bg-white rounded-full" />
+      <div
+        className={`Component36 w-14 h-7 pl-0.5 pr-1 py-1 left-[923px] top-[584px] absolute rounded-full flex items-center cursor-pointer ${toggles.reminders ? 'bg-red-500' : 'bg-gray-300'}`}
+        onClick={() => handleToggle('reminders')}
+      >
+        <div className={`Ellipse33 w-6 h-6 bg-white rounded-full transition-transform ${toggles.reminders ? 'translate-x-6' : 'translate-x-0'}`} />
       </div>
 
-      
       {/* Container untuk Pengaturan dan Lingkaran Icon */}
       <div className="SettingsContainer absolute left-[41px] top-[141px] space-y-8">
         {/* Pengaturan dan Lingkaran Icon */}
